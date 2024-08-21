@@ -280,7 +280,7 @@ class Cli {
 
   // method to find a vehicle to tow
   // TODO: add a parameter to accept a truck object
-  findVehicleToTow(): void {
+  findVehicleToTow(truck: Truck): void {
     inquirer
       .prompt([
         {
@@ -296,12 +296,22 @@ class Cli {
         },
       ])
       .then((answers) => {
+        const selectedVehicle = answers.vehicleToTow;
+
+        if (selectedVehicle instanceof Truck) {
+          console.log('The truck cannot tow itself. Please select another vehicle to tow.');
+          // Perform actions on the truck to allow the user to select another action
+          // This could involve displaying a menu of options specific to trucks
+        } else {
+          console.log(`Towing ${selectedVehicle.make} ${selectedVehicle.model} with the truck.`);
+          // Perform actions on the truck to allow the user to select another action
+          // This could involve displaying a menu of options for the truck after towing
+        }
+      });
+  }
         // TODO: check if the selected vehicle is the truck
         // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
         // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
-      });
-  }
-
   // method to perform actions on a vehicle
   performActions(): void {
     inquirer
