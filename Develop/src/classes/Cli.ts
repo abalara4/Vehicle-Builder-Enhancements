@@ -290,6 +290,7 @@ class Cli {
       .then((answers) => {
         const selectedVehicle = answers.vehicleToTow;
         truck.tow(selectedVehicle);
+        this.performActions();
       });
   }
   // method to perform actions on a vehicle

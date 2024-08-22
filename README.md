@@ -19,7 +19,8 @@ As a new member to the field, this creator not only welcomes but encourages feed
 This project was created by Alex Balara with the assistance and utilization of Xpert Learning Assistant, Copilot, and guidance from a tutor/professors which were crucial components to the understanding and building of this project. 
 
 ## Visuals
-
+This video demonstrates the functionality of the Vehicle Builder enhancements that were made to include trucks and motorbikes.
+https://app.screencastify.com/v3/watch/g9byeBsw1d83PFziGqVK
 
 
 ## Links
