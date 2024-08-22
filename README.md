@@ -22,9 +22,9 @@ This project was created by Alex Balara with the assistance and utilization of X
 This video demonstrates the functionality of the Vehicle Builder enhancements that were made to include trucks and motorbikes.
 https://app.screencastify.com/v3/watch/g9byeBsw1d83PFziGqVK
 
-
 ## Links
-
+ This link includes the GitHub repository for this project.
+ https://github.com/abalara4/Vehicle-Builder-Enhancements.git
 
 ## License
 None
