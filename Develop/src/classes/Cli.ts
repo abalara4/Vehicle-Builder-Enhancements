@@ -1,9 +1,9 @@
 // importing classes from other files
 import inquirer from "inquirer";
-import Truck from "./Truck";
-import Car from "./Car";
-import Motorbike from "./Motorbike";
-import Wheel from "./Wheel";
+import Truck from "./Truck.js";
+import Car from "./Car.js";
+import Motorbike from "./Motorbike.js";
+import Wheel from "./Wheel.js";
 
 // define the Cli class
 class Cli {
@@ -170,6 +170,13 @@ class Cli {
         },
       ])
       .then((answers) => {
+        const wheels: Wheel[] = [
+          new Wheel,
+          new Wheel,
+          new Wheel,
+          new Wheel
+        ];
+        
         const truck = new Truck(
           Cli.generateVin(),
           answers.color,
@@ -178,8 +185,8 @@ class Cli {
           parseInt(answers.year),
           parseInt(answers.weight),
           parseInt(answers.topSpeed),
+          wheels,
           parseInt(answers.towingCapacity),
-          []
         );
 
         this.vehicles.push(truck);
@@ -252,14 +259,10 @@ class Cli {
           parseInt(answers.year),
           parseInt(answers.weight),
           parseInt(answers.topSpeed),
-          new Wheel(
-            parseInt(answers.frontWheelDiameter),
-            answers.frontWheelBrand
-          ),
-          new Wheel(
-            parseInt(answers.rearWheelDiameter),
-            answers.rearWheelBrand
-          )
+          [
+            new Wheel(parseInt(answers.frontWheelDiameter), answers.frontWheelBrand),
+            new Wheel(parseInt(answers.rearWheelDiameter), answers.rearWheelBrand),
+          ]
         );
 
         this.vehicles.push(motorbike);
